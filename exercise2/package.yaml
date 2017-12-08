@@ -1,4 +1,4 @@
-name:                exercise1
+name:                exercise2
 version:             0.1.0.0
 #synopsis:
 #description:
@@ -15,12 +15,6 @@ dependencies:
   - base >= 4.7 && < 5
 
 executables:
-  ex1:
-    source-dirs:      src1
-    main:             Main.hs
-  ex2:
-    source-dirs:      src2
-    main:             Main.hs
-  ex3:
-    source-dirs:      src3
+  exercise2:
+    source-dirs:      src
     main:             Main.hs
