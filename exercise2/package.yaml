@@ -14,7 +14,30 @@ extra-source-files:
 dependencies:
   - base >= 4.7 && < 5
 
-executables:
+library:
   exercise2:
-    source-dirs:      src
+    source-dirs:       lib
+    exposed-modules:
+      - Lib
+
+executables:
+  ex1:
+    source-dirs:      src1
     main:             Main.hs
+    dependencies:     exercise2
+  ex2:
+    source-dirs:      src2
+    main:             Main.hs
+    dependencies:     exercise2
+  ex3:
+    source-dirs:      src3
+    main:             Main.hs
+    dependencies:     exercise2
+
+tests:
+  exercise2-tests:
+    source-dirs:      tests
+    main:             Spec.hs
+    dependencies:
+      - exercise2
+      - QuickCheck
