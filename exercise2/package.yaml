@@ -15,10 +15,7 @@ dependencies:
   - base >= 4.7 && < 5
 
 library:
-  exercise2:
     source-dirs:       lib
-    exposed-modules:
-      - Lib
 
 executables:
   ex1:
