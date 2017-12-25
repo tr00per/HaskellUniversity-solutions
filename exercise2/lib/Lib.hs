@@ -21,15 +21,15 @@ quicksort (x:xs) =
     splitter (less, noless) a = if a < x then (a:less, noless) else (less, a:noless)
 
 fizzbuzz :: Int -> [String]
-fizzbuzz limit = reverse $ fizzbuzz' limit where
+fizzbuzz limit = fizzbuzz' 1 where
     fizzbuzz' x
-        | x < 1 =
+        | x > limit =
             []
         | x `mod` 3 == 0 && x `mod` 5 == 0 =
-            "Fizz Buzz" : fizzbuzz' (x-1)
+            "Fizz Buzz" : fizzbuzz' (x+1)
         | x `mod` 3 == 0 =
-            "Fizz" : fizzbuzz' (x-1)
+            "Fizz" : fizzbuzz' (x+1)
         | x `mod` 5 == 0 =
-            "Buzz" : fizzbuzz' (x-1)
+            "Buzz" : fizzbuzz' (x+1)
         | otherwise =
-            show x : fizzbuzz' (x-1)
+            show x : fizzbuzz' (x+1)
