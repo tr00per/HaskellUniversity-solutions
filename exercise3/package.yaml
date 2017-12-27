@@ -1,0 +1,36 @@
+name:                exercise3
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/tr00per/HaskellUniversity-solutions#readme
+license:             BSD3
+author:              Artur Czajka
+maintainer:          arturczajka@gmail.com
+copyright:           2017 Artur Czajka
+category:            Web
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+
+library:
+    source-dirs:       lib
+
+executables:
+  ex1:
+    source-dirs:      src1
+    main:             Main.hs
+    dependencies:     exercise3
+  ex2:
+    source-dirs:      src2
+    main:             Main.hs
+    dependencies:     exercise3
+
+tests:
+  exercise2-tests:
+    source-dirs:      tests
+    main:             Spec.hs
+    dependencies:
+      - exercise3
+      - QuickCheck
